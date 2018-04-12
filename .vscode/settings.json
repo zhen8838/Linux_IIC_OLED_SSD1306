@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "oled.h": "c",
+        "mycommon.h": "c",
+        "gpio.h": "c",
+        "string.h": "c",
+        "get_num.h": "c",
+        "i2c-dev.h": "c",
+        "bmp.h": "c",
+        "i2c.h": "c",
+        "ip.h": "c",
+        "skbuff.h": "c",
+        "malloc.h": "c",
+        "common.h": "c",
+        "socket.h": "c",
+        "myi2c.h": "c",
+        "fs.h": "c",
+        "stdint.h": "c",
+        "types.h": "c",
+        "stdarg.h": "c",
+        "i2c_smbus.h": "c",
+        "stdlib.h": "c",
+        "oledfont.h": "c"
+    }
+}
