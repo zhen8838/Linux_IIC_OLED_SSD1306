@@ -23,9 +23,9 @@
 #ifndef __OLED_H
 #define __OLED_H			  	 
 
-#define OLED_ADD    0x78
-#define OLED_Write_ADD (0x78<<1)
-#define OLED_Read_ADD  ((0x78<<1)+1)
+#define OLED_ADD    0x3C
+#define OLED_Write_ADD (0x3C<<1)
+#define OLED_Read_ADD  ((0x3C<<1)+1)
 #define IIC_DEV     "/dev/i2c-0"
 
 #define OLED_MODE 0
@@ -51,6 +51,7 @@
 #define OLED_CMD  0	//写命令
 #define OLED_DATA 1	//写数据
 
+static int OLEDfd=-1;
 
 //OLED控制用函数
 void OLED_WR_Byte(unsigned dat,unsigned cmd);  

@@ -119,16 +119,16 @@ void errExit(const char *format, ...)
    stdio buffers that were partially filled by the caller and without
    invoking exit handlers that were established by the caller. */
 
-void err_exit(const char *format, ...)
-{
-    va_list argList;
+// void err_exit(const char *format, ...)
+// {
+//     va_list argList;
 
-    va_start(argList, format);
-    outputError(TRUE, errno, FALSE, format, argList);
-    va_end(argList);
+//     va_start(argList, format);
+//     outputError(TRUE, errno, FALSE, format, argList);
+//     va_end(argList);
 
-    terminate(FALSE);
-}
+//     terminate(FALSE);
+// }
 
 /* The following function does the same as errExit(), but expects
    the error number in 'errnum' */

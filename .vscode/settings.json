@@ -20,6 +20,7 @@
         "stdarg.h": "c",
         "i2c_smbus.h": "c",
         "stdlib.h": "c",
-        "oledfont.h": "c"
+        "oledfont.h": "c",
+        "error_functions.h": "c"
     }
 }

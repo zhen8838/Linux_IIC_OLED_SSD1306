@@ -2,7 +2,7 @@
 #include "oled.h"
 #include "myi2c.h"
 #include "oledfont.h"
-#include "bmp.h"
+
 
 //OLED的显存
 //存放格式如下.
@@ -15,7 +15,7 @@
 //[6]0 1 2 3 ... 127
 //[7]0 1 2 3 ... 127
 
-int OLEDfd;
+
 
 /**********************************************
 // IIC Write Command
@@ -278,5 +278,5 @@ void OLED_Init(void)
 //关闭oled文件
 int OLED_Close(void)
 {
-	close(IIC_DEV);
+	close(OLEDfd);
 }

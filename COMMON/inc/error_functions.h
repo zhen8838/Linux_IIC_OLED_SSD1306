@@ -34,7 +34,7 @@ void errMsg(const char *format, ...);
 
 void errExit(const char *format, ...) NORETURN ;
 
-void err_exit(const char *format, ...) NORETURN ;
+// void err_exit(const char *format, ...) NORETURN ;
 
 void errExitEN(int errnum, const char *format, ...) NORETURN ;
 
