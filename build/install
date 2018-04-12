@@ -1,0 +1,8 @@
+#!/bin/bash
+make
+cd ..
+pwd=${PWD}
+pwd=${PWD}/bin
+BIN=oled
+BODDIR=/root/oled_test
+scp  ${pwd}/${BIN} root@172.24.41.12:${BODDIR}/${BIN}

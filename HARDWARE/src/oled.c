@@ -1,6 +1,7 @@
 #include "mycommon.h"
 #include "oled.h"
 #include "myi2c.h"
+#include "myi2c-dev.h"
 #include "oledfont.h"
 
 
@@ -22,14 +23,16 @@
 **********************************************/
 void Write_IIC_Command(uint8_t IIC_Command)
 {
-	I2CWriteByteTo(OLEDfd,0x00,IIC_Command,0);
+	i2c_smbus_write_byte_data(OLEDfd,OLED_REG_CMD,IIC_Command);
+	// I2CWriteByteTo(OLEDfd,0x00,IIC_Command,0);
 }
 /**********************************************
 // IIC Write Data
 **********************************************/
 void Write_IIC_Data(uint8_t IIC_Data)
 {
-	I2CWriteByteTo(OLEDfd,0x40,IIC_Data,0);
+	i2c_smbus_write_byte_data(OLEDfd,OLED_REG_DAT,IIC_Data);
+	// I2CWriteByteTo(OLEDfd,0x40,IIC_Data,0);
 }
 /**********************************************
 // IIC Write byte
@@ -235,7 +238,7 @@ void OLED_Init(void)
 	if(OLEDfd<0)
 		errExit("OPEN I2C DEV");
 
-	if(setI2CSlave(OLEDfd,OLED_Write_ADD)<0)
+	if(setI2CSlave(OLEDfd,OLED_ADD)<0)
 		errExit("SET SLAVE");
 
 	usleep(200*1000);
