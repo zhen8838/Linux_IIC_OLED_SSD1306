@@ -1,25 +1,3 @@
-//////////////////////////////////////////////////////////////////////////////////
-//本程序只供学习使用，未经作者许可，不得用于其它任何用途
-//中景园电子
-//店铺地址：http://shop73023976.taobao.com/?spm=2013.1.0.0.M4PqC2
-//
-//  文 件 名   : main.c
-//  版 本 号   : v2.0
-//  作    者   : Evk123
-//  生成日期   : 2014-0101
-//  最近修改   :
-//  功能描述   : 0.69寸OLED 接口演示例程(STM32F103ZE系列IIC)
-//              说明:
-//              ----------------------------------------------------------------
-//              GND   电源地
-//              VCC   接5V或3.3v电源
-//              SCL   接PB13（SCL）
-//              SDA   接PB15（SDA）
-//              RES   接PB11 如果是用4针iic接口这个脚可以不接
-//              ----------------------------------------------------------------
-//Copyright(C) 中景园电子2014/3/16
-//All rights reserved
-//////////////////////////////////////////////////////////////////////////////////
 #ifndef __OLED_H
 #define __OLED_H
 
@@ -39,16 +17,6 @@
 #define Brightness 0xFF
 #define X_WIDTH 128
 #define Y_WIDTH 64
-//-----------------OLED IIC端口定义----------------
-
-#define OLED_SCLK_Clr() GPIO_ResetBits(GPIOB, GPIO_Pin_13) //CLK
-#define OLED_SCLK_Set() GPIO_SetBits(GPIOB, GPIO_Pin_13)
-
-#define OLED_SDIN_Clr() GPIO_ResetBits(GPIOB, GPIO_Pin_15) //DIN
-#define OLED_SDIN_Set() GPIO_SetBits(GPIOB, GPIO_Pin_15)
-
-#define OLED_RST_Clr() GPIO_ResetBits(GPIOB, GPIO_Pin_11) //RES
-#define OLED_RST_Set() GPIO_SetBits(GPIOB, GPIO_Pin_11)
 
 #define OLED_CMD 0  //写命令
 #define OLED_DATA 1 //写数据
